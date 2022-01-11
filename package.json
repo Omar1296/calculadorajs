@@ -1,0 +1,35 @@
+{
+  "name": "calculadora",
+  "version": "1.0.0",
+  "description": "calculadora, JavaScript, HTML5, CSS3",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "JavaScript",
+    "Sass",
+    "Gulp",
+    "Css"
+  ],
+  "author": "Omar Alfredo Noyola Monroy",
+  "license": "ISC",
+  "devDependencies": {
+    "autoprefixer": "^10.4.0",
+    "browserify": "^17.0.0",
+    "cssnano": "^5.0.11",
+    "gulp": "^4.0.2",
+    "gulp-cache": "^1.1.3",
+    "gulp-concat": "^2.6.1",
+    "gulp-plumber": "^1.2.1",
+    "gulp-postcss": "^9.0.1",
+    "gulp-sass": "^5.0.0",
+    "gulp-sourcemaps": "^3.0.0",
+    "gulp-webp": "^4.0.1",
+    "postcss": "^8.3.11",
+    "sass": "^1.43.4"
+  },
+  "dependencies": {
+    "gulp-terser": "^2.1.0"
+  }
+}

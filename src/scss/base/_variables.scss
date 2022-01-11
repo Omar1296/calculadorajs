@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=Spartan:wght@400;700&display=swap');
+
+//Fuente
+$spartan: 'Spartan', sans-serif;
+
+//Dispositivos
+$telefono: 480px;
+$tablet: 768px;
+$escritorio: 960px;
+$escritorioHD: 1280px;
+$escritorioFHD: 1400px; 
+
+//Colores letra
+$amarillo: #ffe53d;
+$azulFuerte: #1b2428;
+$blanco: #fff;
+
+//Tema 1-------------------------------------------------------------------
+//1. Fondos
+$fondo1: hsl(222, 26%, 31%);
+$fondo1-1: hsl(223, 31%, 20%);
+$fondo1-2: hsl(224, 36%, 15%);
+//2.teclas
+$teclas1: hsl(225, 21%, 49%);
+$teclas1-1: hsl(224, 28%, 35%);
+$rojo: hsl(6, 63%, 50%);
+$rojoFuerte: hsl(6, 70%, 34%);
+$claro1: hsl(30, 25%, 89%);
+$claro2: hsl(28, 16%, 65%);
+//3. Texto
+$texto1: hsl(221, 14%, 31%);
+
+//Tema 2--------------------------------------------------------------------
+//1.Fondos
+$fondo2: hsl(0, 0%, 90%);
+$fondo2-1: hsl(0, 5%, 81%);
+$fondo2-2: hsl(0, 0%, 93%);
+//Teclas
+$teclas2: hsl(185, 42%, 37%);
+$teclas2-1: hsl(185, 58%, 25%);
+$naranja: hsl(25, 98%, 40%);
+$naranjaFuerte: hsl(25, 99%, 27%);
+$claro3: hsl(45, 7%, 89%);
+$claro4: hsl(35, 11%, 61%);
+//3. Texto
+$texto2: hsl(60, 10%, 19%);
+
+//Tema 3--------------------------------------------------------------------
+$bgvioleta: hsl(268, 75%, 9%);
+$bgvioleta2: hsl(268, 71%, 12%);
+
+$violetaFuerte: hsl(281, 89%, 26%);
+$magenta: hsl(285, 91%, 52%);
+
+$cyanFuerte: hsl(176, 100%, 44%);
+$cyanClaro: hsl(177, 92%, 70%);
+
+$violetaSuave: hsl(268, 47%, 21%);
+$magentaFuerte: hsl(290, 70%, 36%);
+

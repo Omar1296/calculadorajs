@@ -1,0 +1,407 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+body{
+    transition: all .6s ease;
+
+    .calculadora{
+        width: 45%;
+        height: 70%;
+
+        @include m.escritorioHD{
+            width: 50%;
+        }
+
+        @include m.escritorio{
+            width: 75%;
+        }
+    
+        @include m.tablet{
+            width: 80%;
+        }
+    
+        @include m.telefono{
+            width: 98%;
+            height: 60%;
+        }
+    
+        .header{
+            height: 10%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            // background: v.$azulFuerte;
+            color: v.$blanco;
+            padding: 0 2.4rem;
+    
+            @include m.tablet{
+                padding: 0 1rem;
+            }
+    
+            h1{
+                @include m.escritorioHD{
+                    font-size: 2.4rem;
+                }
+
+                @include m.tablet{
+                    font-size: 1.6rem;
+                }
+            }
+    
+            .temas{
+                width: 30%;
+                display: flex;
+
+                @include m.escritorioHD{
+                    width: 35%;
+                }
+
+                @include m.escritorio{
+                    width: 30%;
+                }
+                
+                @include m.tablet{
+                    width: 40%;
+                }
+
+                @include m.telefono{
+                    width: 50%;
+                }
+
+                
+    
+                h3{
+                    display: flex;
+                    align-items: flex-end;
+    
+                }
+    
+                .caja-tema{
+                    display: flex;
+                    justify-content: space-evenly;
+                    width: 100%;
+                    height: 3rem;
+                    position: relative;
+                    background: v.$fondo1-1;
+                    align-items: center;
+                    margin-left: 2rem;
+                    border-radius: 2rem;
+
+                    .circulo{
+                        position: absolute;
+                        width: 2rem;
+                        height: 2rem;
+                        background: v.$rojo;
+                        border-radius: 50%;
+                        left: 5%;
+                        transition: all .3s ease-in-out;
+
+                        @include m.telefono{
+                            left: 8%;
+                        }
+
+                        &.tema2{
+                            left: 39%;
+
+                            @include m.escritorioHD{
+                                left: 37%;
+                            }
+
+                            @include m.tablet{
+                                left: 35%;
+                            }
+                        }
+
+                        &.tema3{
+                            left: 71%;
+
+                            @include m.escritorioHD{
+                                left: 65%;
+                            }
+
+                            @include m.tablet{
+                                left: 60%;
+                            }
+
+                            @include m.telefono{
+                                left: 65%;
+                            }
+                        }
+                    }
+    
+                    label{
+                        position: absolute;
+                        font-weight: 700;
+                        display: block;
+                        top: -2.4rem;
+                    }
+
+                    input[type="radio"]{
+                        visibility: hidden;
+                    }
+                }
+            }
+        }
+    
+        .pantalla{
+            margin: 3rem 0;
+            height: 20%;
+            background: v.$fondo1-2;
+    
+            @include m.tablet{
+                margin: 1.5rem 0;
+            }
+        }
+    
+        .teclado{
+            height: 70%;
+            background: v.$fondo1-1;
+        }
+    }
+    
+    .pantalla{
+        padding: 4.2rem;
+        color: v.$blanco;
+        font-size: 5.4rem;
+        font-weight: 700;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+    
+        @include m.tablet{
+            font-size: 4.2rem;
+            padding: 3.2rem;
+        }
+    
+        @include m.telefono{
+            font-size: 3.2rem;
+            
+        }
+    }
+    
+    .teclado{
+        padding: 4.2rem;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(5, 1fr);
+        grid-template-areas: 
+        "num7 num8 num9 del"
+        "num4 num5 num6 suma"
+        "num1 num2 num3 resta"
+        "punto cero div multi"
+        "resett resett igual igual";
+        gap: 1rem;
+    
+        @include m.tablet{
+            padding: 2rem;
+        }
+    
+        .cont-botones{
+            background: v.$claro1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 2rem;
+            font-size: 2.4rem;
+            font-weight: 700;
+            color: v.$texto1;
+            cursor: pointer;
+    
+            @include m.tablet{
+                border-radius: 1rem;
+                font-size: 1.8rem;
+            }
+            
+        }
+    
+    
+        .cont-uno{
+            grid-area: num1;
+        }
+        
+        .cont-dos{
+            grid-area: num2;
+        }
+        
+        .cont-tres{
+            grid-area: num3;
+        }
+        
+        .cont-cuatro{
+            grid-area: num4;
+        }
+        
+        .cont-cinco{
+            grid-area: num5;
+        }
+        
+        .cont-seis{
+            grid-area: num6;
+        }
+        
+        .cont-siete{
+            grid-area: num7;
+        }
+        
+        .cont-ocho{
+            grid-area: num8;
+        }
+        
+        .cont-nueve{
+            grid-area: num9;
+        }
+        
+        .cont-cero{
+            grid-area: cero;
+        }
+        
+        .cont-punto{
+            grid-area: punto;
+        }
+        
+        .cont-suma{
+            grid-area: suma;
+        }
+        
+        .cont-resta{
+            grid-area: resta;
+        }
+        
+        .cont-multi{
+            grid-area: multi;
+        }
+        
+        .cont-division{
+            grid-area: div;
+        }
+        
+        .cont-borrar{
+            grid-area: del;
+            background: v.$teclas1;
+            color: v.$blanco;
+        }
+        
+        .cont-reset{
+            grid-area: resett;
+            background: v.$teclas1;
+            color: v.$blanco;
+        }
+        
+        .cont-igual{
+            grid-area: igual;
+            background: v.$rojo;
+            color: v.$blanco;
+        }
+    }
+}
+
+.cont-tema2{
+    .calculadora{
+            
+        .header{
+            color: v.$texto2;
+    
+            .temas{
+    
+                .caja-tema{
+                    background: v.$fondo2-1;
+
+                    .circulo{
+                        background: v.$naranja;
+                    }
+                }
+            }
+        }
+    
+        .pantalla{
+            background: v.$fondo2-2;
+        }
+    
+        .teclado{
+            background: v.$fondo2-1;
+        }
+    }
+    
+    .pantalla{
+        color: v.$texto2;
+    }
+    
+    .teclado{
+    
+        .cont-botones{
+            background: v.$claro3;
+            color: v.$texto2;            
+        }
+
+        .cont-borrar{
+            background: v.$teclas2;
+            color: v.$blanco;
+        }
+        
+        .cont-reset{
+            background: v.$teclas2;
+            color: v.$blanco;
+        }
+        
+        .cont-igual{
+            background: v.$naranja;
+            color: v.$blanco;
+        }
+    }
+}
+
+.cont-tema3{
+    .calculadora{
+            
+        .header{
+            color: v.$amarillo;
+    
+            .temas{
+    
+                .caja-tema{
+                    background: v.$bgvioleta2;
+
+                    .circulo{
+                        background: v.$cyanFuerte;
+                    }
+                }
+            }
+        }
+    
+        .pantalla{
+            background: v.$violetaSuave;
+        }
+    
+        .teclado{
+            background: v.$violetaSuave;
+        }
+    }
+    
+    .pantalla{
+        color: v.$amarillo;
+    }
+    
+    .teclado{
+    
+        .cont-botones{
+            background: v.$bgvioleta2;
+            color: v.$amarillo;            
+        }
+
+        .cont-borrar{
+            background: v.$magenta;
+            color: v.$amarillo;
+        }
+        
+        .cont-reset{
+            background: v.$magenta;
+            color: v.$amarillo;
+        }
+        
+        .cont-igual{
+            background: v.$cyanClaro;
+            color: v.$azulFuerte;
+        }
+    }
+}
+

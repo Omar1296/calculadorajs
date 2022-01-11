@@ -1,0 +1,43 @@
+@use 'variables' as v;
+@use 'mixins' as m;
+
+html{
+    font-size: 62.5%;
+}
+
+body{
+    font-size: 1.6rem;
+    font-family: v.$spartan;
+    width: 100%;
+    height: 100vh;
+    background: v.$fondo1;
+
+    &.cont-tema2{
+        background: v.$fondo2;
+    }
+
+    &.cont-tema3{
+        background: v.$bgvioleta;
+    }
+
+    a{
+        color: v.$blanco;
+        text-decoration: none;
+        font-weight: 700;
+    }
+}
+
+.secciones{
+    border-radius: 2rem;
+}
+
+.contenedor{
+    width: 90%;
+    height: 100vh;
+    max-width: v.$escritorioHD;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
